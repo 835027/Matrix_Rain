@@ -1,1 +1,2 @@
-# Matrix_Rain
+Name: Ntjana Donald
+Student at University of the Witwatersrand
