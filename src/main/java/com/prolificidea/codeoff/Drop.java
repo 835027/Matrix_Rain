@@ -40,7 +40,7 @@ public class Drop {
                    g2.setColor(new Color(159,159,159));
     	     
            }
-            g2.rotate(Math.toRadians(9*Math.tan(75)),0,0);
+            g2.rotate(Math.toRadians(9*Math.tan(75)),350,y+50);
             g2.drawChars(text[i], 0, 1, x, y + (i * fontSize));
         }
         y += velocity;

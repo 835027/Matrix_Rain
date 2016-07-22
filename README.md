@@ -1,2 +1,1 @@
-Name: Ntjana Donald
-Student at University of the Witwatersrand
+Name: Ntjana Donald .Student at University of the Witwatersrand

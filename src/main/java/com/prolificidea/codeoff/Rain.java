@@ -47,7 +47,7 @@ public class Rain extends JPanel {
           
         }     
         try {
-            Thread.sleep(10);
+            Thread.sleep(2);
            }catch (Exception ex) {
             ex.printStackTrace();
         }
