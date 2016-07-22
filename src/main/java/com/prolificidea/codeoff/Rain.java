@@ -32,7 +32,7 @@ public class Rain extends JPanel {
 
         final BufferedImage image;
 		try {
-			image = ImageIO.read(new File("rsz_image1.png"));
+			image = ImageIO.read(new File("rsz_anony.jpg"));
             g.drawImage(image, 0, 0, null);
 		   } catch (IOException e) {
 			e.printStackTrace();
@@ -40,7 +40,7 @@ public class Rain extends JPanel {
 		
         for (int i = 0; i < drops.length; i++) {
             if (drops[i].isOffScreen()) {
-                drops[i] = new Drop(i * Config.FONT_SIZE);
+               // drops[i] = new Drop(i * Config.FONT_SIZE);
             }
         
             drops[i].draw(g2);

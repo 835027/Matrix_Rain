@@ -13,7 +13,7 @@ public class Drop {
         this.x = x;
         length = getRandomInteger(120, 150);
         text = createContent(length);
-        velocity = getRandomInteger(1, 5);
+        velocity = getRandomInteger(1, 1);
         this.y = (-1) * length * Config.FONT_SIZE;
     }
 
@@ -40,7 +40,7 @@ public class Drop {
                    g2.setColor(new Color(159,159,159));
     	     
            }
-            g2.rotate(Math.toRadians(9*Math.tan(75)),350,y+50);
+            g2.rotate(Math.toRadians((Math.tan(75))/9),550,110);
             g2.drawChars(text[i], 0, 1, x, y + (i * fontSize));
         }
         y += velocity;
