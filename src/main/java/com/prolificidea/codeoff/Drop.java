@@ -11,9 +11,9 @@ public class Drop {
 
     Drop(int x) {
         this.x = x;
-        length = getRandomInteger(120, 150);
+        length = getRandomInteger(5, 30);
         text = createContent(length);
-        velocity = getRandomInteger(1, 1);
+        velocity = getRandomInteger(1, 5);
         this.y = (-1) * length * Config.FONT_SIZE;
     }
 
@@ -27,20 +27,27 @@ public class Drop {
 
     public void draw(Graphics2D g2) {
         int fontSize = g2.getFont().getSize();
-        for (int i = 0; i < length; i++) {
+        int sign = 1;
+		for (int i = 0; i < length; i++) {
         	
-        	g2.setColor(new Color(28, 146, 44));
+        	//g2.setColor(new Color(rand.nextInt(255), rand.nextInt(255), rand.nextInt(255)));
            if (getRandomInteger(0, length) == i){
-        	   
+        	   Random rand = new Random();
         	   if (getRandomInteger(0, length) == i)
                    text[i][0] = getRandomCharacter();
                if (i == length - 1)
-                   g2.setColor(new Color(159,159,159));
+			   g2.setColor(new Color(rand.nextInt(157),rand.nextInt(157),rand.nextInt(157)));
                else
-                   g2.setColor(new Color(159,159,159));
+               g2.setColor(new Color(157,157,157));
     	     
            }
-            g2.rotate(Math.toRadians((Math.tan(75))/9),550,110);
+		   if(i < length/4){
+			   sign = -1;
+			   g2.rotate(Math.toRadians(((Math.tan(75)+(Math.tan(75))+(Math.tan(75))))*sign*9),350,350);
+			}else{
+                sign=1; 				
+            //g2.rotate(Math.toRadians(((Math.tan(75)+(Math.tan(75))+(Math.tan(75))))*sign*9),350,350);
+			}
             g2.drawChars(text[i], 0, 1, x, y + (i * fontSize));
         }
         y += velocity;
